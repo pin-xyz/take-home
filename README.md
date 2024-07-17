@@ -40,18 +40,20 @@ Imagine we're building this app in a real environment, so we have to deal with m
 1. Disable the Create button while the data is being submitted and handled by the server
 1. Show a javascript `alert` once the note has been processed successfully
 > Hint 1: this will likely involve using a React `useEffect`
+
 > Hint 2: it may be helpful to return a non-null value from the `action` and make sure the `useFetcher` is typed correctly (e.g. `useFetcher<...>()`)
 
-## Pairing Questions
+## Interview
 
-There are a few other features we'd like to implement during our pairing session together.
+### Pairing Questions
 
-1. Implement the ability to delete notes
-1. Validate the users input. The title and body fields cannot be empty. Show an error in the `New Note` form and prevent the user from submitting the form.
+In the interview, your interviewer will ask you to discuss your solution for the above points. After that, you'll be given a few other features to implement in the code while explaining your solution to the interviewer.
 
-Things we'll talk through:
+If you have Visual Studio Code installed on your machine, please add the [LiveShare](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) extension so your interviewer and you can collaborate on the code. If not, you can access LiveShare using your browser with a link your interviewer will provide.
 
-* How can we make this application more production ready?
+### Algorithm Question
+
+If there is time afterwards, your interviewer will walkthrough a basic algorithm problem (imagine Leetcode easy-medium) and chat about solutions.
 
 ## Questions?
 
