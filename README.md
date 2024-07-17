@@ -7,11 +7,10 @@ We ask that you spend no more than 2 hours on this project, as we will also revi
 ## Getting Started
 
 1. Start by cloning this repo to your local machine
-2. `cd` to your newly cloned repo and take a look around
-3. When ready, run `npm i`
-4. Run your development server by running `npm run dev`
-5. Run migrations for our sqlite database `npm run setup`
-6. Open a browser window to `localhost:3000` to view the app
+1. `cd` to your newly cloned repo and take a look around
+1. When ready, run `npm i`
+1. Run your development server by running `npm run dev`
+1. Open a browser window to `localhost:3000` to view the app
 
 ## Resources & Documentation
 
@@ -22,12 +21,20 @@ We ask that you spend no more than 2 hours on this project, as we will also revi
 
 This app is missing much of its core functionality. The task here is to finish implementing some of the missing features for an MVP version of our note taking app. Much of the work needed to complete this project will be done in `app/routes/_index.ts`.
 
+### Finish home page
+
 1. Update the `_index.tsx` action functon to save notes to our Sqlite database. 
 > Hint: you will need to import the prisma client from `db.server.ts`
-2. Currently our notes are hard-coded inside of our `loader`. Display notes that are stored in the database using the Prisma client.
-3. Add a `createdAt` field to the `Note` model in our Prisma schema in `schema.prisma`. 
+1. Currently our notes are hard-coded inside of our `loader`. Display notes that are stored in the database using the Prisma client.
+1. Add a `createdAt` field to the `Note` model in our Prisma schema in `schema.prisma`. 
 > Hint: Don't forget to run migrations after you make changes to the schema.
-4. After a note is created, clear the `New Note` form.
+1. After a note is created, clear the `New Note` form.
+
+### Page UX improvements
+
+Great! Now that we can create notes, let's improve the user experience a little bit. We're primarily going to be focused on enhancing the UX using [useFetcher](https://remix.run/docs/en/main/hooks/use-fetcher)
+
+1. 
 
 ## Pairing Questions
 
