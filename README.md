@@ -32,22 +32,26 @@ This app is missing much of its core functionality. The task here is to finish i
 
 ### Page UX improvements
 
-Great! Now that we can create notes, let's improve the user experience a little bit. We're primarily going to be focused on enhancing the UX using [useFetcher](https://remix.run/docs/en/main/hooks/use-fetcher)
+Great! Now that we can create notes, let's improve the user experience a little bit. We're primarily going to be focused on enhancing the UX using [useFetcher](https://remix.run/docs/en/main/hooks/use-fetcher).
 
-1. 
+Imagine we're building this app in a real environment, so we have to deal with more latency than locally. Clicking the "Create" button may not work instantaneously. This might accidentally cause the user to press it again, which could result in several types of unwanted side-effects. To see this locally, a simple `await new Promise((resolve) => setTimeout(resolve, 5000));` could be added to the beginning of the `action`.
+
+1. Instead of `Form`, switch to relying on `fetcher.Form`
+1. Disable the Create button while the data is being submitted and handled by the server
+1. Show a javascript `alert` once the note has been processed successfully
+> Hint 1: this will likely involve using a React `useEffect`
+> Hint 2: it may be helpful to return a non-null value from the `action` and make sure the `useFetcher` is typed correctly (e.g. `useFetcher<...>()`)
 
 ## Pairing Questions
 
 There are a few other features we'd like to implement during our pairing session together.
 
 1. Implement the ability to delete notes
-2. Validate the users input. The title and body fields cannot be empty. Show an error in the `New Note` form and prevent the user from submitting the form.
+1. Validate the users input. The title and body fields cannot be empty. Show an error in the `New Note` form and prevent the user from submitting the form.
 
 Things we'll talk through:
 
 * How can we make this application more production ready?
-* How can we make this app more accessible?
-* What steps could be taken to improve the performance of an app like this at scale?
 
 ## Questions?
 
