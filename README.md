@@ -43,18 +43,4 @@ Imagine we're building this app in a real environment, so we have to deal with m
 
 > Hint 2: it may be helpful to return a non-null value from the `action` and make sure the `useFetcher` is typed correctly (e.g. `useFetcher<...>()`)
 
-## Interview
-
-### Pairing Questions
-
-In the interview, your interviewer will ask you to discuss your solution for the above points. After that, you'll be given a few other features to implement in the code while explaining your solution to the interviewer.
-
-If you have Visual Studio Code installed on your machine, please add the [LiveShare](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare) extension so your interviewer and you can collaborate on the code. If not, you can access LiveShare using your browser with a link your interviewer will provide.
-
-### Algorithm Question
-
-If there is time afterwards, your interviewer will walkthrough a basic algorithm problem (imagine Leetcode easy-medium) and chat about solutions.
-
-## Questions?
-
-If you need anything please do not hesistate to reach out to your interviewer.
+1. Implement the ability to delete notes
