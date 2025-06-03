@@ -1,15 +1,14 @@
-import {
+import type {
   ActionFunctionArgs,
-  json,
   LoaderFunctionArgs,
-  type MetaFunction,
-} from "@remix-run/node";
-import { Form, useLoaderData } from "@remix-run/react";
-import { format, parseISO } from "date-fns";
+  MetaFunction,
+} from "react-router";
+import { Form } from "react-router";
+import { useLoaderData } from "react-router";
+import { format } from "date-fns";
 
-// eslint-disable-next-line no-empty-pattern
 export const loader = ({}: LoaderFunctionArgs) => {
-  return json({
+  return {
     notes: [
       {
         id: "123",
@@ -24,18 +23,17 @@ export const loader = ({}: LoaderFunctionArgs) => {
         createdAt: new Date(),
       },
     ],
-  });
+  };
 };
 
-// eslint-disable-next-line no-empty-pattern
 export const action = ({}: ActionFunctionArgs) => {
   return null;
 };
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Remix Notes" },
-    { name: "description", content: "PIN Remix take-home" },
+    { title: "React-Router Notes" },
+    { name: "description", content: "PIN React-Router take-home" },
   ];
 };
 
@@ -52,12 +50,12 @@ export default function Index() {
         <input
           name="title"
           placeholder="Title"
-          className="w-full rounded-md px-2 py-1 focus:outline-2 outline-blue-500 outline-offset-2"
+          className="w-full rounded-md px-2 py-1 outline-1 focus:outline-2 outline-blue-500 outline-offset-2"
         />
         <textarea
           name="body"
           placeholder="Body"
-          className="w-full rounded-md px-2 py-1 focus:outline-2 outline-blue-500 outline-offset-2"
+          className="w-full rounded-md px-2 py-1 outline-1 focus:outline-2 outline-blue-500 outline-offset-2"
         />
         <button className="bg-blue-500 rounded-md px-2 py-1 text-white hover:bg-blue-700 focus:outline-2 outline-blue-500 outline-offset-2 disabled:opacity:50 disabled:bg-slate-100">
           Create
@@ -69,7 +67,7 @@ export default function Index() {
             <h2 className="font-semibold text-md text-blue-700">{title}</h2>
             <p className="text-blue-900">{body}</p>
             <div className="text-sm pt-2 text-blue-500">
-              {format(parseISO(createdAt), "PPPpp")}
+              {format(createdAt, "PPPpp")}
             </div>
           </div>
         ))}
