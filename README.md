@@ -10,7 +10,7 @@ If you have Visual Studio Code installed on your machine, please add the [LiveSh
 2. When ready, run `npm i`
 3. Run your development server by running `npm run dev`
 > Heads up: You'll need at least Node v18 installed to run this React-Router code, although we recommend at least v20. If you're unsure how to do this, we recommend installing Node Version Manager (nvm) and then installing node with that.
-4. Open a browser window to `localhost:3000` to view the app
+4. Open a browser window to `localhost:5173` to view the app
 
 ## Resources & Documentation
 
@@ -28,7 +28,6 @@ This app is missing much of its core functionality. The task here is to finish i
 2. Currently our notes are hard-coded inside of our `loader`. Display notes that are stored in the database using the Prisma client.
 3. Add a `createdAt` field to the `Note` model in our Prisma schema in `schema.prisma`. 
 > Hint: Don't forget to run migrations after you make changes to the schema. See `package.json`'s `migrate` script.
-4. After a note is created, clear the `New Note` form.
 
 ### Page UX improvements
 
@@ -42,10 +41,6 @@ Imagine we're building this app in a real environment, so we have to deal with m
 > Hint 1: this will likely involve using a React `useEffect`
 
 > Hint 2: it may be helpful to return a non-null value from the `action` and make sure the `useFetcher` is typed correctly (e.g. `useFetcher<...>()`)
-
-### Algorithm Question
-
-If there is time afterwards, your interviewer will walkthrough a basic algorithm problem (imagine Leetcode easy-medium) and chat about solutions.
 
 ## Questions?
 
